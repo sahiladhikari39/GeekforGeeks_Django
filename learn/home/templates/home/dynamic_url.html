@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>index</title>
+</head>
+<body>
+    <h1>Hello Everyone!</h1>
+    <p>It's Dynamic Url Time</p>
+    <p>The first dynamic url passed = {{id}}</p>
+    <p>The second dynamic url passed = {{id2}}</p>
+    <p>
+        <a href="{% url 'index'%}">Home</a><br>
+        <a href="{% url 'contact'%}">Contact Us</a><br>
+        <a href="{% url 'about'%}">About Us</a>
+    </p>
+</body>
+</html>
