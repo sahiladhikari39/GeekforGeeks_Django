@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #EEEFE0; color: #819A91;">
+    <p>
+        <a href="{% url 'index'%}">Home</a><br>
+        <a href="{% url 'contact'%}">Contact Us</a><br>
+        <a href="{% url 'about'%}">About Us</a>
+    </p>
+    <hr>
+    {% block start %}
+    
+    {% endblock %}
+</body>
+</html>

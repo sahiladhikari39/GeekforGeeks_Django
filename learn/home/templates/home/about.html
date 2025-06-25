@@ -1,14 +1,6 @@
-<html>
-<head>
-    <title>about</title>
-</head>
-<body>
+{% extends "home/base.html" %}
+{% block start %}
     <h1>Hello Everyone!</h1>
     <p>This is about us page!😂</p>
-    <p>
-        <a href="{% url 'index'%}">Home</a><br>
-        <a href="{% url 'contact'%}">Contact Us</a><br>
-        <a href="{% url 'about'%}">About Us</a>
-    </p>
-</body>
-</html>
+{% include "home/image.html" %}
+{% endblock %}

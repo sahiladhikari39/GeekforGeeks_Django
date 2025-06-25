@@ -1,8 +1,5 @@
-<html>
-<head>
-    <title>index</title>
-</head>
-<body>
+{% extends "home/base.html" %}
+{% block start %}
     <h1>Hello Everyone!</h1>
     <p>Relearning django again!😭</p>
     <p>helloo world</p>
@@ -36,10 +33,6 @@
     </p>
 
     <hr>
-    <p>
-        <a href="{% url 'index'%}">Home</a><br>
-        <a href="{% url 'contact'%}">Contact Us</a><br>
-        <a href="{% url 'about'%}">About Us</a>
-    </p>
-</body>
-</html>
+
+    
+{% endblock %} 
