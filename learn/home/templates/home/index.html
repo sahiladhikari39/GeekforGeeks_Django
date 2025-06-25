@@ -9,6 +9,33 @@
 
     <h2>The random number that is generated is: {{random_num}}</h2>
     <hr>
+
+    <ol>
+        {% for fruit in fruits %}
+            <li>{{fruit}}</li>
+        {% endfor %}
+    </ol>
+
+    <hr>
+
+    <p>
+        <h3>Name | Capital | Continent |</h3>
+        {% for country in countries %}
+        <p>{{country.name}} | {{country.capital}} | {{country.continent}} | 
+            {% if country.continent == "Asia" %}
+            🏏🏏🏏
+            {% elif country.continent == "Europe" %}
+            🏀🏀🏀
+            {% elif country.continent == "North America" %}
+            🏈🏈🏈
+            {% else %}
+            ⚽⚽⚽
+            {% endif %}
+        </p>
+        {% endfor %}
+    </p>
+
+    <hr>
     <p>
         <a href="{% url 'index'%}">Home</a><br>
         <a href="{% url 'contact'%}">Contact Us</a><br>

@@ -5,7 +5,20 @@ import random
 # Create your views here.
 def index(request):
     random_num = random.randint(100, 1000)
-    context = {'random_num':random_num}
+    fruits = ["Banana 🍌", "Apple 🍎", "Grapes 🍇"]
+    countries = [
+    {"name": "Nepal", "capital": "Kathmandu", "continent": "Asia"},
+    {"name": "India", "capital": "New Delhi", "continent": "Asia"},
+    {"name": "United States", "capital": "Washington, D.C.", "continent": "North America"},
+    {"name": "Germany", "capital": "Berlin", "continent": "Europe"},
+    {"name": "Brazil", "capital": "Brasília", "continent": "South America"},
+    {"name": "Australia", "capital": "Canberra", "continent": "Australia"},
+    {"name": "Egypt", "capital": "Cairo", "continent": "Africa"},
+    {"name": "Canada", "capital": "Ottawa", "continent": "North America"},
+    {"name": "France", "capital": "Paris", "continent": "Europe"},
+    {"name": "Japan", "capital": "Tokyo", "continent": "Asia"}
+    ]
+    context = {'random_num':random_num, "fruits":fruits, 'countries':countries}
     return render(request, 'home/index.html', context)
 
 def contact(request):
