@@ -29,3 +29,9 @@ def about(request):
 
 def dynamic_url(request, id, id2):
     return render(request, 'home/dynamic_url.html', context={'id':id, 'id2':id2})
+
+
+def project(request):
+    ranNum= random.randint(1, 10)
+    context={'ranNum':ranNum}
+    return render(request, 'project/project.html', context)

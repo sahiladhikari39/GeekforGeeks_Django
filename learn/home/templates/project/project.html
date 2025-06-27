@@ -1,0 +1,52 @@
+{% extends "home/base.html" %}
+
+{% block start %}
+    <div class="container mt-5">
+        <h1 class="text-center">Guess the lucky number🎲🎲🎲</h1>
+        <form action="#">
+            <div class="form-group col-md-5 mx-auto">
+                <label>Hope You win!</label>
+                <input class="form-control mt-1" placeholder="Enter your guess (Between 1 to 10)" id="input">
+            </div>
+        </form>
+        <div class="text-center">
+            <button type="button" class="btn btn-success mt-4" onclick="check()">Check</button>
+        </div>
+    </div>
+    <form action="" method="get"></form>
+
+    <p>{{ranNum}}</p>
+
+    <script>
+        var num = {{ranNum}}
+        var guess = document.getElementById('input')
+        var count = 3
+        function check(){
+            count -=1
+            if(input.value == ""){
+                alert("You cannot leave the guess blank!")
+            }
+
+            if(count==0){
+                alert("Game over 😕")
+                window.location.reload()
+                return
+            }
+
+            if(num==input.value){
+                alert("Congratulations you won!")
+                window.location.reload()
+                return
+            }else if(num > input.value){
+                alert(`Num might be higher than your guess😜 \n Total chance:3 \n Chance left: ${count} `)
+                input.value = ""
+                return
+            }else if(num < input.value){
+                alert(`Num might be less than your guess😜 \n Total chance:3 \n Chance left: ${count} `)
+                input.value = ""
+                return
+            }
+        }
+
+    </script>
+{% endblock %}

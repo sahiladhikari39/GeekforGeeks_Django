@@ -23,5 +23,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('about/', views.about, name='about'), 
     path('contact/', views.contact, name='contact'),
+    path('project/', views.project, name='project'),
     path('<id>/<int:id2>/', views.dynamic_url, name='dynamic_url'), #arko chahi type nii def grna milxa like <int:id>
 ]
